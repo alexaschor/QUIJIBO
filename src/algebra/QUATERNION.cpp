@@ -71,8 +71,8 @@ QUATERNION operator*(const QUATERNION& left, const QUATERNION& right)
                                              SWIZZLE(b,2,0,1,2)), mask);
   const __m128 flip2 = _mm_xor_ps(_mm_mul_ps(SWIZZLE(a,3,3,3,1),
                                              SWIZZLE(b,0,1,2,1)), mask);
-  return QUATERNION(_mm_add_ps(_mm_sub_ps(_mm_mul_ps(a,SWIZZLE(b,3,3,3,3)), 
-                                          _mm_mul_ps(SWIZZLE(a,2,0,1,0), SWIZZLE(b,1,2,0,0))), 
+  return QUATERNION(_mm_add_ps(_mm_sub_ps(_mm_mul_ps(a,SWIZZLE(b,3,3,3,3)),
+                                          _mm_mul_ps(SWIZZLE(a,2,0,1,0), SWIZZLE(b,1,2,0,0))),
                                           _mm_add_ps(flip1,flip2)));
 }
 */
@@ -80,10 +80,10 @@ QUATERNION operator*(const QUATERNION& left, const QUATERNION& right)
 QUATERNION operator*(const QUATERNION& left, const QUATERNION& right)
 {
   QUATERNION final;
-  final._x = left._y * right._z - left._z * right._y + right._w * left._x + left._w * right._x;
-  final._y = left._z * right._x - left._x * right._z + right._w * left._y + left._w * right._y;
-  final._z = left._x * right._y - left._y * right._x + right._w * left._z + left._w * right._z;
-  final._w = left._w * right._w - left._x * right._x - right._y * left._y - left._z * right._z;
+  final.x() = left.y() * right.z() - left.z() * right.y() + right.w() * left.x() + left.w() * right.x();
+  final.y() = left.z() * right.x() - left.x() * right.z() + right.w() * left.y() + left.w() * right.y();
+  final.z() = left.x() * right.y() - left.y() * right.x() + right.w() * left.z() + left.w() * right.z();
+  final.w() = left.w() * right.w() - left.x() * right.x() - right.y() * left.y() - left.z() * right.z();
   return final;
 }
 
@@ -109,13 +109,13 @@ QUATERNION operator/(const QUATERNION& left, const QUATERNION& right)
 
 Real operator^(const QUATERNION& left, const QUATERNION& right)
 {
-  return left._x * right._x + left._y * right._y +
-         left._z * right._z + left._w * right._w;
+  return left.x() * right.x() + left.y() * right.y() +
+         left.z() * right.z() + left.w() * right.w();
 }
 
 ostream& operator<<(ostream &out, const QUATERNION& q)
 {
-  out << "(" << q._w << ", " << q._x << ", " << q._y << ", " << q._z << ")";
+  out << "(" << q.w() << ", " << q.x() << ", " << q.y() << ", " << q.z() << ")";
   return out;
 }
 
@@ -192,7 +192,7 @@ void QUATERNION::equals(const QUATERNION& q)
 void QUATERNION::juliaIteration(const QUATERNION& c)
 {
   const Real copy[] = {_x, _y, _z, _w};
-  
+
   //const Real copy01 = copy[0] * copy[1];
   //const Real copy12 = copy[1] * copy[2];
   //const Real copy02 = copy[0] * copy[2];
@@ -269,7 +269,7 @@ QUATERNION QUATERNION::exp() const
 }
 
 //////////////////////////////////////////////////////////////////////
-// take the log 
+// take the log
 // from: http://www.lce.hut.fi/~ssarkka/pub/quat.pdf
 //////////////////////////////////////////////////////////////////////
 QUATERNION QUATERNION::log() const
@@ -291,7 +291,7 @@ QUATERNION QUATERNION::log() const
 // take the power
 // from: http://www.lce.hut.fi/~ssarkka/pub/quat.pdf
 //
-// some care has been taken to optimize this ... 
+// some care has been taken to optimize this ...
 //////////////////////////////////////////////////////////////////////
 QUATERNION QUATERNION::pow(const Real& exponent) const
 {
