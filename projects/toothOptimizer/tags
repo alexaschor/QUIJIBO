@@ -1,0 +1,184 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+CC	Makefile	/^CC         = g++$/;"	m
+CFLAGS	Makefile	/^CFLAGS     = ${CFLAGS_COMMON} -O3$/;"	m
+CONTINUE_ITERATING	toothOptimizer.cpp	/^  CONTINUE_ITERATING      =  0$/;"	e	enum:SOLVER_STATE	file:
+CONVERGED_FATOL	toothOptimizer.cpp	/^  CONVERGED_FATOL          =  1, \/* f(X)-f(X*) <= fatol *\/$/;"	e	enum:SOLVER_STATE	file:
+CONVERGED_FRTOL	toothOptimizer.cpp	/^  CONVERGED_FRTOL          =  2, \/* |F(X) - f(X*)|\/|f(X)| < frtol *\/$/;"	e	enum:SOLVER_STATE	file:
+CONVERGED_GATOL	toothOptimizer.cpp	/^  CONVERGED_GATOL          =  3, \/* ||g(X)|| < gatol *\/$/;"	e	enum:SOLVER_STATE	file:
+CONVERGED_GRTOL	toothOptimizer.cpp	/^  CONVERGED_GRTOL          =  4, \/* ||g(X)|| \/ f(X)  < grtol *\/$/;"	e	enum:SOLVER_STATE	file:
+CONVERGED_GTTOL	toothOptimizer.cpp	/^  CONVERGED_GTTOL          =  5, \/* ||g(X)|| \/ ||g(X0)|| < gttol *\/ $/;"	e	enum:SOLVER_STATE	file:
+CONVERGED_MINF	toothOptimizer.cpp	/^  CONVERGED_MINF          =  7, \/* F < F_min *\/$/;"	e	enum:SOLVER_STATE	file:
+CONVERGED_STEPTOL	toothOptimizer.cpp	/^  CONVERGED_STEPTOL        =  6, \/* step size small *\/$/;"	e	enum:SOLVER_STATE	file:
+CONVERGED_USER	toothOptimizer.cpp	/^  CONVERGED_USER          =  8, \/* User defined *\/$/;"	e	enum:SOLVER_STATE	file:
+DIVERGED_LS_FAILURE	toothOptimizer.cpp	/^  DIVERGED_LS_FAILURE     = -6,$/;"	e	enum:SOLVER_STATE	file:
+DIVERGED_MAXFCN	toothOptimizer.cpp	/^  DIVERGED_MAXFCN         = -5,$/;"	e	enum:SOLVER_STATE	file:
+DIVERGED_MAXITS	toothOptimizer.cpp	/^  DIVERGED_MAXITS         = -2,$/;"	e	enum:SOLVER_STATE	file:
+DIVERGED_NAN	toothOptimizer.cpp	/^  DIVERGED_NAN            = -4,$/;"	e	enum:SOLVER_STATE	file:
+DIVERGED_TR_REDUCTION	toothOptimizer.cpp	/^  DIVERGED_TR_REDUCTION   = -7,$/;"	e	enum:SOLVER_STATE	file:
+DIVERGED_USER	toothOptimizer.cpp	/^  DIVERGED_USER           = -8, \/* User defined *\/$/;"	e	enum:SOLVER_STATE	file:
+EXECUTABLE	Makefile	/^EXECUTABLE = ..\/..\/bin\/toothOptimizer$/;"	m
+FormFunctionGradient	toothOptimizer.cpp	/^PetscErrorCode FormFunctionGradient(TaoSolver tao,Vec X,PetscReal *f, Vec G,void *ptr)$/;"	f
+FormHessian	toothOptimizer.cpp	/^PetscErrorCode FormHessian(TaoSolver tao,Vec X,Mat *HH, Mat *Hpre, MatStructure *flag,void *ptr)$/;"	f
+FormScaledFunctionGradient	toothOptimizer.cpp	/^PetscErrorCode FormScaledFunctionGradient(TaoSolver tao,Vec X,PetscReal *f, Vec G,void *ptr)$/;"	f
+FormScaledFunctionGradient	toothOptimizer.cpp	/^void FormScaledFunctionGradient(const VECTOR& state, OPTIMIZE_3D& optimize3D, Real& function, VECTOR& gradient)$/;"	f
+FormScaledFunctionGradient	toothOptimizer.cpp	/^void FormScaledFunctionGradient(const VECTOR& state, Real& function, VECTOR& gradient)$/;"	f
+FormScaledOnlyFunctionGradient	toothOptimizer.cpp	/^PetscErrorCode FormScaledOnlyFunctionGradient(TaoSolver tao,Vec X,PetscReal *f, Vec G,void *ptr)$/;"	f
+FormScaledOnlyFunctionGradient	toothOptimizer.cpp	/^void FormScaledOnlyFunctionGradient(const VECTOR& state, OPTIMIZE_3D& optimize3D, Real& function, VECTOR& gradient)$/;"	f
+FormScaledOnlyFunctionGradient	toothOptimizer.cpp	/^void FormScaledOnlyFunctionGradient(const VECTOR& state, Real& function, VECTOR& gradient)$/;"	f
+INF	toothOptimizer.cpp	/^const Real INF = 1.0e100;$/;"	v
+LDFLAGS	Makefile	/^LDFLAGS    = ${LDFLAGS_COMMON}$/;"	m
+LINESEARCH_CONTINUE_ITERATING	toothOptimizer.cpp	/^    LINESEARCH_CONTINUE_ITERATING = 0,$/;"	e	enum:LINE_SEARCH_TERMINATION_REASON	file:
+LINESEARCH_FAILED_ASCENT	toothOptimizer.cpp	/^    LINESEARCH_FAILED_ASCENT = -3,$/;"	e	enum:LINE_SEARCH_TERMINATION_REASON	file:
+LINESEARCH_FAILED_BADPARAMETER	toothOptimizer.cpp	/^    LINESEARCH_FAILED_BADPARAMETER = -2,$/;"	e	enum:LINE_SEARCH_TERMINATION_REASON	file:
+LINESEARCH_FAILED_INFORNAN	toothOptimizer.cpp	/^    LINESEARCH_FAILED_INFORNAN = -1,$/;"	e	enum:LINE_SEARCH_TERMINATION_REASON	file:
+LINESEARCH_HALTED_LOWERBOUND	toothOptimizer.cpp	/^    LINESEARCH_HALTED_LOWERBOUND = 6,$/;"	e	enum:LINE_SEARCH_TERMINATION_REASON	file:
+LINESEARCH_HALTED_MAXFCN	toothOptimizer.cpp	/^    LINESEARCH_HALTED_MAXFCN = 4,$/;"	e	enum:LINE_SEARCH_TERMINATION_REASON	file:
+LINESEARCH_HALTED_OTHER	toothOptimizer.cpp	/^    LINESEARCH_HALTED_OTHER = 3,$/;"	e	enum:LINE_SEARCH_TERMINATION_REASON	file:
+LINESEARCH_HALTED_RTOL	toothOptimizer.cpp	/^    LINESEARCH_HALTED_RTOL = 7,$/;"	e	enum:LINE_SEARCH_TERMINATION_REASON	file:
+LINESEARCH_HALTED_UPPERBOUND	toothOptimizer.cpp	/^    LINESEARCH_HALTED_UPPERBOUND = 5,$/;"	e	enum:LINE_SEARCH_TERMINATION_REASON	file:
+LINESEARCH_HALTED_USER	toothOptimizer.cpp	/^    LINESEARCH_HALTED_USER = 8$/;"	e	enum:LINE_SEARCH_TERMINATION_REASON	file:
+LINESEARCH_SUCCESS	toothOptimizer.cpp	/^    LINESEARCH_SUCCESS = 1,$/;"	e	enum:LINE_SEARCH_TERMINATION_REASON	file:
+LINESEARCH_SUCCESS_USER	toothOptimizer.cpp	/^    LINESEARCH_SUCCESS_USER = 2,$/;"	e	enum:LINE_SEARCH_TERMINATION_REASON	file:
+LINE_SEARCH_OLD	toothOptimizer.cpp	/^  LINE_SEARCH_OLD()$/;"	f	class:LINE_SEARCH_OLD
+LINE_SEARCH_OLD	toothOptimizer.cpp	/^class LINE_SEARCH_OLD $/;"	c	file:
+LINE_SEARCH_TERMINATION_REASON	toothOptimizer.cpp	/^enum LINE_SEARCH_TERMINATION_REASON$/;"	g	file:
+LS_ComputeObjectiveAndGradient	toothOptimizer.cpp	/^void LS_ComputeObjectiveAndGradient(LINE_SEARCH_OLD& ls, OPTIMIZE_3D& optimize3D, VECTOR& x, Real& f, VECTOR& g)$/;"	f
+LS_VecStepBoundInfo	toothOptimizer.cpp	/^void LS_VecStepBoundInfo(VECTOR& x, VECTOR& xl, VECTOR& xu, VECTOR& dx, Real& boundmin, Real& wolfemin, Real& boundmax)$/;"	f
+MyMonitor	toothOptimizer.cpp	/^PetscErrorCode MyMonitor(TaoSolver tao, void *ptr) $/;"	f
+NINF	toothOptimizer.cpp	/^const Real NINF = -1.0e100;$/;"	v
+OBJECTS	Makefile	/^OBJECTS    = $(SOURCES:.cpp=.o)$/;"	m
+SOLVER_STATE	toothOptimizer.cpp	/^enum SOLVER_STATE {$/;"	g	file:
+SOURCES	Makefile	/^SOURCES    = toothOptimizer.cpp \\$/;"	m
+TAO_BFGS	toothOptimizer.cpp	/^#define TAO_BFGS$/;"	d	file:
+TAO_DefaultConvergenceTest	toothOptimizer.cpp	/^void TAO_DefaultConvergenceTest(const int functionEvals, const int functionGradEvals, SOLVER_STATE& reason)$/;"	f
+TAO_LineSearchApply	toothOptimizer.cpp	/^void TAO_LineSearchApply(LINE_SEARCH_OLD& ls, OPTIMIZE_3D& optimize3D, VECTOR& x, Real& f, VECTOR& g, VECTOR& s)$/;"	f
+VecBoundGradientProjection	toothOptimizer.cpp	/^void VecBoundGradientProjection(const VECTOR& G, const VECTOR& X, const VECTOR& XL, const VECTOR& XU, VECTOR& GP)$/;"	f
+_bounded	toothOptimizer.cpp	/^  int _bounded;$/;"	m	class:LINE_SEARCH_OLD	file:
+_bracket	toothOptimizer.cpp	/^  int _bracket;$/;"	m	class:LINE_SEARCH_OLD	file:
+_data	toothOptimizer.cpp	/^  void *_data;$/;"	m	class:LINE_SEARCH_OLD	file:
+_f_fullstep	toothOptimizer.cpp	/^  Real _f_fullstep;$/;"	m	class:LINE_SEARCH_OLD	file:
+_ftol	toothOptimizer.cpp	/^  Real _ftol;	 \/* tol for sufficient decr. condition (ftol>0) *\/$/;"	m	class:LINE_SEARCH_OLD	file:
+_gtol	toothOptimizer.cpp	/^  Real _gtol;	 \/* tol for curvature condition (gtol>0)*\/$/;"	m	class:LINE_SEARCH_OLD	file:
+_hasgradient	toothOptimizer.cpp	/^  bool _hasgradient;$/;"	m	class:LINE_SEARCH_OLD	file:
+_hasobjective	toothOptimizer.cpp	/^  bool _hasobjective;$/;"	m	class:LINE_SEARCH_OLD	file:
+_hasobjectiveandgradient	toothOptimizer.cpp	/^  bool _hasobjectiveandgradient;$/;"	m	class:LINE_SEARCH_OLD	file:
+_infoc	toothOptimizer.cpp	/^  int _infoc;$/;"	m	class:LINE_SEARCH_OLD	file:
+_initstep	toothOptimizer.cpp	/^  Real _initstep;$/;"	m	class:LINE_SEARCH_OLD	file:
+_lower	toothOptimizer.cpp	/^  VECTOR _lower;$/;"	m	class:LINE_SEARCH_OLD	file:
+_max_funcs	toothOptimizer.cpp	/^  int _max_funcs;$/;"	m	class:LINE_SEARCH_OLD	file:
+_new_f	toothOptimizer.cpp	/^  Real _new_f;$/;"	m	class:LINE_SEARCH_OLD	file:
+_new_g	toothOptimizer.cpp	/^  VECTOR _new_g;$/;"	m	class:LINE_SEARCH_OLD	file:
+_new_x	toothOptimizer.cpp	/^  VECTOR _new_x;$/;"	m	class:LINE_SEARCH_OLD	file:
+_nfeval	toothOptimizer.cpp	/^  int _nfeval;  \/\/ function evaluations$/;"	m	class:LINE_SEARCH_OLD	file:
+_nfgeval	toothOptimizer.cpp	/^  int _nfgeval; \/\/ function-grad evaluations$/;"	m	class:LINE_SEARCH_OLD	file:
+_ngeval	toothOptimizer.cpp	/^  int _ngeval;  \/\/ gradient evaluations$/;"	m	class:LINE_SEARCH_OLD	file:
+_reason	toothOptimizer.cpp	/^  LINE_SEARCH_TERMINATION_REASON _reason;$/;"	m	class:LINE_SEARCH_OLD	file:
+_rtol	toothOptimizer.cpp	/^  Real _rtol;	 \/* relative tol for acceptable step (rtol>0) *\/$/;"	m	class:LINE_SEARCH_OLD	file:
+_setupcalled	toothOptimizer.cpp	/^  bool _setupcalled;$/;"	m	class:LINE_SEARCH_OLD	file:
+_start_x	toothOptimizer.cpp	/^  VECTOR _start_x;$/;"	m	class:LINE_SEARCH_OLD	file:
+_step	toothOptimizer.cpp	/^  Real _step;$/;"	m	class:LINE_SEARCH_OLD	file:
+_stepdirection	toothOptimizer.cpp	/^  VECTOR _stepdirection;$/;"	m	class:LINE_SEARCH_OLD	file:
+_stepmax	toothOptimizer.cpp	/^  Real _stepmax;	 \/* upper bound for step *\/$/;"	m	class:LINE_SEARCH_OLD	file:
+_stepmin	toothOptimizer.cpp	/^  Real _stepmin;	 \/* lower bound for step *\/$/;"	m	class:LINE_SEARCH_OLD	file:
+_upper	toothOptimizer.cpp	/^  VECTOR _upper;$/;"	m	class:LINE_SEARCH_OLD	file:
+_usegts	toothOptimizer.cpp	/^  bool _usegts;$/;"	m	class:LINE_SEARCH_OLD	file:
+_usetaoroutines	toothOptimizer.cpp	/^  bool _usetaoroutines;$/;"	m	class:LINE_SEARCH_OLD	file:
+_viewls	toothOptimizer.cpp	/^  bool _viewls;    \/* print out information if true *\/$/;"	m	class:LINE_SEARCH_OLD	file:
+_work	toothOptimizer.cpp	/^  VECTOR _work;$/;"	m	class:LINE_SEARCH_OLD	file:
+_x	toothOptimizer.cpp	/^  VECTOR _x;$/;"	m	class:LINE_SEARCH_OLD	file:
+animate	toothOptimizer.cpp	/^bool animate = false;$/;"	v
+buildReweightedField	toothOptimizer.cpp	/^void buildReweightedField()$/;"	f
+buildReweightedInsideField	toothOptimizer.cpp	/^void buildReweightedInsideField()$/;"	f
+callConstrainedScaledOnlyTao	toothOptimizer.cpp	/^int callConstrainedScaledOnlyTao(OPTIMIZE_3D& optimize3D)$/;"	f
+callConstrainedScaledTao	toothOptimizer.cpp	/^int callConstrainedScaledTao(OPTIMIZE_3D& optimize3D)$/;"	f
+callConstrainedTao	toothOptimizer.cpp	/^int callConstrainedTao(OPTIMIZE_3D& optimize3D)$/;"	f
+callTao	toothOptimizer.cpp	/^int callTao(OPTIMIZE_3D& optimize3D)$/;"	f
+cfgFilename	toothOptimizer.cpp	/^string cfgFilename;$/;"	v
+computeBLMVM	toothOptimizer.cpp	/^void computeBLMVM(BLMVM& lmvm, OPTIMIZE_3D& optimize3D, VECTOR& solution)$/;"	f
+computeBLMVM	toothOptimizer.cpp	/^void computeBLMVM(BLMVM& lmvm, VECTOR& solution)$/;"	f
+computeFractal	toothOptimizer.cpp	/^void computeFractal(int res)$/;"	f
+computeLogScore	toothOptimizer.cpp	/^void computeLogScore()$/;"	f
+computeVariableBounds	toothOptimizer.cpp	/^int computeVariableBounds(VECTOR& XL, VECTOR& XU, VECTOR& solution)$/;"	f
+distanceMesh	toothOptimizer.cpp	/^TRIANGLE_MESH* distanceMesh = NULL;$/;"	v
+distanceScore	toothOptimizer.cpp	/^Real distanceScore(const FIELD_3D& logFractal, const FIELD_3D& distanceField, const Real& threshold)$/;"	f
+drawAxes	toothOptimizer.cpp	/^void drawAxes()$/;"	f
+drawDistanceMesh	toothOptimizer.cpp	/^bool drawDistanceMesh = false;$/;"	v
+drawTriangles	toothOptimizer.cpp	/^bool drawTriangles = true;$/;"	v
+drawWorstPoint	toothOptimizer.cpp	/^void drawWorstPoint()$/;"	f
+extended	toothOptimizer.cpp	/^QUATERNIONE extended;$/;"	v
+findWorstPoint	toothOptimizer.cpp	/^void findWorstPoint()$/;"	f
+fractalMesh	toothOptimizer.cpp	/^TRIANGLE_MESH* fractalMesh = NULL;$/;"	v
+fractalRadius	toothOptimizer.cpp	/^Real fractalRadius = 4.0;$/;"	v
+functionGradient	toothOptimizer.cpp	/^void (*functionGradient)(const VECTOR& state, OPTIMIZE_3D& optimize3D, Real& function, VECTOR& gradient);$/;"	v
+functionGradientMT	toothOptimizer.cpp	/^void (*functionGradientMT)(const VECTOR& state, Real& function, VECTOR& gradient);$/;"	v
+glutSpecial	toothOptimizer.cpp	/^void glutSpecial(int key, int x, int y)$/;"	f
+glvu	toothOptimizer.cpp	/^GLVU glvu;$/;"	v
+glvuWindow	toothOptimizer.cpp	/^int glvuWindow( glvuVec3f bboxCenter, Real eyeDistanceScale = 1.0 )$/;"	f
+help	toothOptimizer.cpp	/^static  char help[] = "This example demonstrates use of the TAO package to \\n\\$/;"	v	file:
+isoIncrement	toothOptimizer.cpp	/^Real isoIncrement = 1;$/;"	v
+itoPaddedString	toothOptimizer.cpp	/^static std::string itoPaddedString(int frame)$/;"	f	file:
+loopMesh	toothOptimizer.cpp	/^LOOP_MESH loopMesh;$/;"	v
+main	toothOptimizer.cpp	/^int main(int argc, char* argv[])$/;"	f
+marchingSurface	toothOptimizer.cpp	/^Real marchingSurface = 0;$/;"	v
+maxScore	toothOptimizer.cpp	/^Real maxScore = -1;$/;"	v
+maxTaoIterations	toothOptimizer.cpp	/^int maxTaoIterations = 100;$/;"	v
+mcstep	toothOptimizer.cpp	/^void mcstep(LINE_SEARCH_OLD& ls,$/;"	f
+median	toothOptimizer.cpp	/^VECTOR median(const VECTOR& v0, const VECTOR& v1, const VECTOR& v2)$/;"	f
+mid	toothOptimizer.cpp	/^double mid(const double& a, const double& b, const double& c)$/;"	f
+movie	toothOptimizer.cpp	/^QUICKTIME_MOVIE movie;$/;"	v
+optimize3D	toothOptimizer.cpp	/^OPTIMIZE_3D optimize3D;$/;"	v
+optimizeSpecificResolution	toothOptimizer.cpp	/^void optimizeSpecificResolution(int argc, char* argv[], string path, SIMPLE_PARSER& parser, int res)$/;"	f
+path	toothOptimizer.cpp	/^string path;$/;"	v
+polynomialPosition	toothOptimizer.cpp	/^int polynomialPosition = 0;$/;"	v
+res	toothOptimizer.cpp	/^int res = 25;$/;"	v
+restarting	toothOptimizer.cpp	/^bool restarting = false;$/;"	v
+scores	toothOptimizer.cpp	/^vector<Real> scores;$/;"	v
+screenshot	toothOptimizer.cpp	/^void screenshot(string renderPath, int frame)$/;"	f
+solveConstrainedScaledOnlyTao	toothOptimizer.cpp	/^int solveConstrainedScaledOnlyTao(int argc, char** argv, OPTIMIZE_3D& optimize3D)$/;"	f
+solveConstrainedScaledTao	toothOptimizer.cpp	/^int solveConstrainedScaledTao(int argc, char** argv, OPTIMIZE_3D& optimize3D)$/;"	f
+solveConstrainedTao	toothOptimizer.cpp	/^int solveConstrainedTao(int argc, char** argv, OPTIMIZE_3D& optimize3D)$/;"	f
+solveTao	toothOptimizer.cpp	/^int solveTao(int argc, char** argv, OPTIMIZE_3D& optimize3D)$/;"	f
+taoInit	toothOptimizer.cpp	/^int taoInit(int argc, char**& argv)$/;"	f
+tao_catol	toothOptimizer.cpp	/^Real tao_catol       = 0.0;$/;"	v
+tao_cnorm	toothOptimizer.cpp	/^Real tao_cnorm = 0.0;$/;"	v
+tao_cnorm0	toothOptimizer.cpp	/^Real tao_cnorm0 = 0.0;$/;"	v
+tao_crtol	toothOptimizer.cpp	/^Real tao_crtol       = 0.0;$/;"	v
+tao_fatol	toothOptimizer.cpp	/^Real tao_fatol       = 1e-8;$/;"	v
+tao_fc	toothOptimizer.cpp	/^Real tao_fc;$/;"	v
+tao_fmin	toothOptimizer.cpp	/^Real tao_fmin        = -1e100;$/;"	v
+tao_frtol	toothOptimizer.cpp	/^Real tao_frtol       = 1e-8;$/;"	v
+tao_gatol	toothOptimizer.cpp	/^Real tao_gatol       = 1e-8;$/;"	v
+tao_gnorm0	toothOptimizer.cpp	/^Real tao_gnorm0;$/;"	v
+tao_grtol	toothOptimizer.cpp	/^Real tao_grtol       = 1e-8;$/;"	v
+tao_gttol	toothOptimizer.cpp	/^Real tao_gttol       = 0.0;$/;"	v
+tao_hist_len	toothOptimizer.cpp	/^int tao_hist_len = 0;$/;"	v
+tao_hist_max	toothOptimizer.cpp	/^int tao_hist_max = 0;$/;"	v
+tao_max_funcs	toothOptimizer.cpp	/^int tao_max_funcs   = 10000;$/;"	v
+tao_max_it	toothOptimizer.cpp	/^int tao_max_it     = 10000;$/;"	v
+tao_niter	toothOptimizer.cpp	/^int tao_niter;$/;"	v
+tao_residual	toothOptimizer.cpp	/^Real tao_residual;$/;"	v
+tao_step	toothOptimizer.cpp	/^Real tao_step;$/;"	v
+tao_steptol	toothOptimizer.cpp	/^Real tao_steptol       = 0.0;$/;"	v
+tao_xtol	toothOptimizer.cpp	/^Real tao_xtol        = 0.0;$/;"	v
+topPolynomial	toothOptimizer.cpp	/^bool topPolynomial = true;$/;"	v
+transparent	toothOptimizer.cpp	/^bool transparent = true;$/;"	v
+triangleMesh	toothOptimizer.cpp	/^TRIANGLE_MESH* triangleMesh = NULL;$/;"	v
+unproject	toothOptimizer.cpp	/^VEC3F unproject(float x, float y, float z)$/;"	f
+userDisplayFunc	toothOptimizer.cpp	/^void userDisplayFunc()$/;"	f
+userIdleFunc	toothOptimizer.cpp	/^void userIdleFunc()$/;"	f
+userKeyboardFunc	toothOptimizer.cpp	/^void userKeyboardFunc(unsigned char Key, int x, int y)$/;"	f
+userMotionFunc	toothOptimizer.cpp	/^void userMotionFunc(int x, int y)$/;"	f
+userMouseFunc	toothOptimizer.cpp	/^void userMouseFunc(int button, int state, int x, int y)$/;"	f
+whichRoot	toothOptimizer.cpp	/^int whichRoot = 0;$/;"	v
+windowHeight	toothOptimizer.cpp	/^static int windowHeight = 700;$/;"	v	file:
+windowStartX	toothOptimizer.cpp	/^static int windowStartX = 0;$/;"	v	file:
+windowStartY	toothOptimizer.cpp	/^static int windowStartY = 0;$/;"	v	file:
+windowWidth	toothOptimizer.cpp	/^static int windowWidth = 700;$/;"	v	file:
+worstCurvature	toothOptimizer.cpp	/^Real worstCurvature;$/;"	v
+worstNormal	toothOptimizer.cpp	/^VEC3F worstNormal;$/;"	v
+worstPosition	toothOptimizer.cpp	/^VEC3F worstPosition;$/;"	v

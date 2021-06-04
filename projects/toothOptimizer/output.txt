@@ -1,0 +1,61 @@
+g++ -c -Wall -I../../src/solvers -I../../src/TOUPEE -I../../src/integrators -I../../src/algebra -I../../src/geometry -I../../src/util -I../../src/glvu -I../../src/solvers -DDO_PNG_OUT=0 -I/Users/tedkim/glvu-osx/Build/include/ -I./ -I/opt/local/include -I../../ -I../../src/Eigen/ -O3 -DNO_FFT -fopenmp -msse2 --param inline-unit-growth=100000 --param large-function-growth=10000 --param max-inline-insns-single=10000 -Winline -DUSING_OSX -O3 ../../src/geometry/FIELD_3D.cpp -o ../../src/geometry/FIELD_3D.o
+In file included from ../../src/geometry/FIELD_3D.cpp:1:0:
+../../src/geometry/FIELD_3D.h:42:18: error: 'vector' does not name a type
+../../src/geometry/FIELD_3D.h:42:18: error: ISO C++ forbids declaration of 'parameter' with no type [-fpermissive]
+../../src/geometry/FIELD_3D.h:42:24: error: expected ',' or '...' before '<' token
+../../src/geometry/FIELD_3D.h:119:48: error: 'vector' has not been declared
+../../src/geometry/FIELD_3D.h:119:54: error: expected ',' or '...' before '<' token
+../../src/geometry/FIELD_3D.cpp:205:1: error: prototype for 'FIELD_3D::FIELD_3D(const std::vector<FIELD_2D>&)' does not match any in class 'FIELD_3D'
+../../src/geometry/FIELD_3D.cpp:169:1: error: candidates are: FIELD_3D::FIELD_3D(const VECTOR&, const FIELD_3D&)
+../../src/geometry/FIELD_3D.cpp:110:1: error:                 FIELD_3D::FIELD_3D(const unsigned char*, const int&, const int&, const int&)
+../../src/geometry/FIELD_3D.cpp:81:1: error:                 FIELD_3D::FIELD_3D(const bool*, const int&, const int&, const int&)
+In file included from ../../src/geometry/FIELD_3D.cpp:1:0:
+../../src/geometry/FIELD_3D.h:43:3: error:                 FIELD_3D::FIELD_3D(const char*)
+../../src/geometry/FIELD_3D.h:42:3: error:                 FIELD_3D::FIELD_3D(int)
+../../src/geometry/FIELD_3D.cpp:139:1: error:                 FIELD_3D::FIELD_3D(const FIELD_3D&)
+../../src/geometry/FIELD_3D.cpp:51:1: error:                 FIELD_3D::FIELD_3D(const long double*, const int&, const int&, const int&, const VEC3F&, const VEC3F&)
+../../src/geometry/FIELD_3D.cpp:20:1: error:                 FIELD_3D::FIELD_3D(const int&, const int&, const int&, const VEC3F&, const VEC3F&)
+../../src/geometry/FIELD_3D.cpp:200:1: error:                 FIELD_3D::FIELD_3D()
+../../src/geometry/FIELD_3D.cpp:1275:6: error: prototype for 'void FIELD_3D::cellNeighborhood(const VEC3F&, std::vector<TVEC3<int> >&, std::vector<long double>&) const' does not match any in class 'FIELD_3D'
+In file included from ../../src/geometry/FIELD_3D.cpp:1:0:
+../../src/geometry/FIELD_3D.h:119:8: error: candidate is: void FIELD_3D::cellNeighborhood(const VEC3F&, int) const
+../../src/geometry/FIELD_3D.cpp: In member function 'void FIELD_3D::readHoudiniField(FILE*, bool)':
+../../src/geometry/FIELD_3D.cpp:4102:10: warning: unused variable 'data' [-Wunused-variable]
+../../src/geometry/FIELD_3D.cpp:4013:7: warning: unused variable 'index' [-Wunused-variable]
+../../src/geometry/FIELD_3D.cpp:4016:8: warning: unused variable 'negativeTwo' [-Wunused-variable]
+../../src/geometry/FIELD_3D.cpp: In static member function 'static FIELD_3D FIELD_3D::readHoudiniField(FILE*)':
+../../src/geometry/FIELD_3D.cpp:4133:7: warning: unused variable 'index' [-Wunused-variable]
+../../src/geometry/FIELD_3D.cpp:4136:8: warning: unused variable 'negativeTwo' [-Wunused-variable]
+../../src/geometry/FIELD_3D.cpp:4171:9: warning: unused variable 'data' [-Wunused-variable]
+../../src/geometry/FIELD_3D.cpp: In member function 'long double FIELD_3D::Dx(const VEC3F&) const':
+../../src/geometry/FIELD_3D.cpp:4525:43: error: no matching function for call to 'FIELD_3D::cellNeighborhood(const VEC3F&, std::vector<TVEC3<int> >&, std::vector<long double>&) const'
+../../src/geometry/FIELD_3D.cpp:4525:43: note: candidate is:
+In file included from ../../src/geometry/FIELD_3D.cpp:1:0:
+../../src/geometry/FIELD_3D.h:119:8: note: void FIELD_3D::cellNeighborhood(const VEC3F&, int) const
+../../src/geometry/FIELD_3D.h:119:8: note:   candidate expects 2 arguments, 3 provided
+../../src/geometry/FIELD_3D.cpp: In member function 'long double FIELD_3D::Dy(const VEC3F&) const':
+../../src/geometry/FIELD_3D.cpp:4543:43: error: no matching function for call to 'FIELD_3D::cellNeighborhood(const VEC3F&, std::vector<TVEC3<int> >&, std::vector<long double>&) const'
+../../src/geometry/FIELD_3D.cpp:4543:43: note: candidate is:
+In file included from ../../src/geometry/FIELD_3D.cpp:1:0:
+../../src/geometry/FIELD_3D.h:119:8: note: void FIELD_3D::cellNeighborhood(const VEC3F&, int) const
+../../src/geometry/FIELD_3D.h:119:8: note:   candidate expects 2 arguments, 3 provided
+../../src/geometry/FIELD_3D.cpp: In member function 'long double FIELD_3D::Dz(const VEC3F&) const':
+../../src/geometry/FIELD_3D.cpp:4561:43: error: no matching function for call to 'FIELD_3D::cellNeighborhood(const VEC3F&, std::vector<TVEC3<int> >&, std::vector<long double>&) const'
+../../src/geometry/FIELD_3D.cpp:4561:43: note: candidate is:
+In file included from ../../src/geometry/FIELD_3D.cpp:1:0:
+../../src/geometry/FIELD_3D.h:119:8: note: void FIELD_3D::cellNeighborhood(const VEC3F&, int) const
+../../src/geometry/FIELD_3D.h:119:8: note:   candidate expects 2 arguments, 3 provided
+../../src/geometry/FIELD_3D.cpp: In member function 'long double FIELD_3D::principalCurvature(const VEC3F&) const':
+../../src/geometry/FIELD_3D.cpp:5136:43: error: no matching function for call to 'FIELD_3D::cellNeighborhood(const VEC3F&, std::vector<TVEC3<int> >&, std::vector<long double>&) const'
+../../src/geometry/FIELD_3D.cpp:5136:43: note: candidate is:
+In file included from ../../src/geometry/FIELD_3D.cpp:1:0:
+../../src/geometry/FIELD_3D.h:119:8: note: void FIELD_3D::cellNeighborhood(const VEC3F&, int) const
+../../src/geometry/FIELD_3D.h:119:8: note:   candidate expects 2 arguments, 3 provided
+../../src/geometry/FIELD_3D.cpp:5139:7: warning: unused variable 'index' [-Wunused-variable]
+../../src/geometry/FIELD_3D.cpp: In static member function 'static FIELD_3D FIELD_3D::yRampField(const FIELD_3D&, long double)':
+../../src/geometry/FIELD_3D.cpp:6208:15: warning: unused variable 'xFrac' [-Wunused-variable]
+../../src/geometry/FIELD_3D.cpp:6210:15: warning: unused variable 'zFrac' [-Wunused-variable]
+../../src/geometry/FIELD_3D.cpp: In member function 'FIELD_3D FIELD_3D::invertedDistanceNormalized() const':
+../../src/geometry/FIELD_3D.cpp:6616:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+../../src/geometry/FIELD_3D.cpp:6630:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+make: *** [../../src/geometry/FIELD_3D.o] Error 1
