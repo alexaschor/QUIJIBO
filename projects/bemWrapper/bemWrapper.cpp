@@ -59,17 +59,18 @@ int main(int argc, char** argv)
   string outputFilename = fullPath + parser.getString("potential field", "dummy.field3d");
 
   // TODO: If you're trying the advanced version, you will need to modify these
-  // to point to your own build of tutorial_dirichlet in BEM++
-  string cdCall("cd /Users/tedkim/bempp/build/bempp/examples");
-  string exportCall("export DYLD_LIBRARY_PATH=/Users/tedkim/bempp/lib");
+  // to activate the proper Python environment (if any) and point to the location
+  // of solve_potential.py on your disk
+  string preCall("source ~/bempp-cl/.venv/bin/activate");
+  string pathToScript("~/QUIJIBO/projects/bemWrapper/solve_potential.py");
 
   // call the BEM solver
   char buffer[1024];
-  sprintf(buffer,"./tutorial_dirichlet %s %s %s", inputFilename.c_str(), distanceFilename.c_str(), outputFilename.c_str());
+  sprintf(buffer,"python %s %s %s %s", pathToScript.c_str(), inputFilename.c_str(), distanceFilename.c_str(), outputFilename.c_str());
   string bemCall(buffer);
 
   cout << " BEM call: " << bemCall.c_str() << endl;
-  string concatCall = cdCall + string(";") + exportCall + string(";") + bemCall;
+  string concatCall = preCall + string(";") + bemCall;
   cout << " Concatenated call: " << concatCall << endl;
 
   TIMER bemTimer("BEM Call");
