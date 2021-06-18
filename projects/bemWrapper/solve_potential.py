@@ -26,6 +26,10 @@ def readDimensionsFromFile(filename):
         yLength, = struct.unpack('<d', f.read(8))
         zLength, = struct.unpack('<d', f.read(8))
 
+        print(" Field res:     ", xRes, yRes, zRes)
+        print(" Field center:  ", xCenter, yCenter, zCenter)
+        print(" Field lengths: ", xLength, yLength, zLength)
+
         return ((xRes, yRes, zRes),
                 (xCenter, yCenter, zCenter),
                 (xLength, yLength, zLength))
